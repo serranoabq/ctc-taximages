@@ -24,7 +24,7 @@ if( class_exists( 'CTC_TaxImages' ) ) {
 	 * @param mixed $term_id ID of the taxonomy term to output the image for. NULL by default
 	 * @return mixed URL of image associated with a taxonomy term
 	 */
-	public function ctc_tax_img_url( $term_id = NULL ) {
+	function ctc_tax_img_url( $term_id = NULL ) {
 		if( $term_id )
 			$imgsrc = get_option( 'ctc_tax_img_' . $term_id );
 		elseif( is_tax() ) {	
